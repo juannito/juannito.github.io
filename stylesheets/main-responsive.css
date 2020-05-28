@@ -1,0 +1,344 @@
+/* MAIN-RESPONSIVE.CSS contains Mobile Specific rules powered by Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries 
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it 
+there. 
+*/
+
+
+
+/* Larger than Desktop HD */
+@media (max-width: 1360px) {
+    .container {
+        max-width: 1260px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+/* Larger than Desktop HD */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1100px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+/* Larger HD */
+@media (max-width: 1100px) {
+    .container {
+        max-width: 1000px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .news-post-head h4{
+        font-size: 36px;
+        line-height: 43px;
+    }
+}
+/* Larger than Desktop HD */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 924px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+
+/* Larger than desktop */
+@media (max-width: 992px) {
+    .container {
+        max-width: 500px;
+    }
+    .text-left, .text-right, .mastfoot, .credits, .services-item {
+        text-align: center;
+    }
+
+    .img-responsive {
+        display: inline-block;
+    }
+    section.mastwrap{
+      border: 60px solid;
+      border-top: 120px solid;
+      border-bottom: 0;
+    }
+    .cd-panel-container{
+    	width: 70%;
+    }
+    header.masthead{
+        padding: 0px 50px;
+    }
+    .header-highlighted{
+        padding: 0px 50px !important;
+    }
+    .masthead .text-left{
+    	text-align: left !important;
+    }
+    .masthead .text-right{
+    	text-align: right !important;
+    }
+    .menu-panel ul li a.main-link {
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 48px;
+	}
+	.sub-menu a {
+	    font-size: 14px;
+	    line-height: 21px;
+	}
+    footer.mastfoot {
+        top: auto;
+        bottom: 0;
+        height: auto;
+        position: relative;
+        right: 0;
+        text-align: center;
+        width: 100%;
+    }
+    footer .credits{
+        -webkit-transform:none;
+        -moz-transform:none;
+        -o-transform:none;
+        -ms-transform:none;
+        transform:none;
+        bottom: auto;
+        right: auto;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .foot-social{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .foot-social li{
+        display: inline-block;
+    }
+
+	.works-masonry-container .works-item-one-third,
+	.works-masonry-container .works-item-two-third,
+	.works-masonry-container .works-item-one-half,
+	.works-masonry-container .works-item-one-fourth,
+	.works-masonry-container .works-item-full-width,
+	.works-masonry-container .works-item-one-third-spaced,
+	.works-masonry-container .works-item-one-half-spaced,
+	.works-masonry-container .works-item-two-third-spaced,
+	.works-masonry-container .works-item-one-fourth-spaced{
+	  margin: 0% !important;
+	  padding: 0 !important;
+	  width: 50% !important;
+	}
+	.works-item-inner {
+	    padding: 0 40px;
+	    text-align: left;
+	}
+
+    .agency-tile h6::after{
+        display: block;
+        margin-left: -20px;
+        left: 50%;
+        position: absolute;
+    }
+    div#preloader {
+        width: 100% !important;
+        height: 100%;
+        left: 0px;
+        position: fixed;
+        top: 120px;
+        margin-right: 0px;
+    }
+    .featured-work-caption{
+        left: 30px !important;
+        font-size: 24px !important;
+        line-height: 31px !important;
+    }
+    .featured-work-caption > span{
+        font-size: 32px !important;
+        line-height: 39px !important;
+    }
+    .liner{
+        display: inline-block;
+    }
+    .standard-nav-wrap #main_nav{
+        display: none;
+    }
+    .standard-nav-wrap .menu-trigger{
+        display: block;
+        text-align: right !important;
+    }
+    .standard-nav-active{
+        visibility: visible;
+    }
+}
+
+/* Larger than tablet */
+@media (max-width: 800px) {
+    .container {
+        width: 700px;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+    }
+    section.mastwrap{
+      border: 50px solid;
+      border-top: 120px solid;
+      border-bottom: 0;
+    }
+
+}
+/* Larger than tablet */
+@media (max-width: 768px) {
+    .container {
+        width: 668px;
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+    }
+}
+
+/*iPhone 6Plus Landscape Mode*/
+@media screen and (max-width: 736px) {
+    .container {
+        width: 636px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+
+/*iPhone 6 Landscape Mode*/
+@media screen and (max-width: 667px) {
+    .container {
+        width: 567px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+
+/*Google Nexus and Other Large Smart Phones v1*/
+@media screen and (max-width: 600px) {
+    .container {
+        width: 500px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+/*iPhone Landscape Mode and Mediium Smart Phones*/
+@media screen and (max-width: 480px) {
+    .container {
+        width: 400px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    section.mastwrap{
+      border: 40px solid;
+      border-top: 80px solid;
+      border-bottom: 0;
+    }
+    div#preloader {
+        top: 80px;
+    }
+    header.masthead{
+        padding: 0 40px;
+    }
+    .header-highlighted{
+        padding: 0px 40px !important;
+    }
+    header.masthead .masthead-half-left, header.masthead .masthead-half-right{
+        height: 80px;
+    }
+	.works-masonry-container .works-item-one-third,
+	.works-masonry-container .works-item-two-third,
+	.works-masonry-container .works-item-one-half,
+	.works-masonry-container .works-item-one-fourth,
+	.works-masonry-container .works-item-full-width,
+	.works-masonry-container .works-item-one-third-spaced,
+	.works-masonry-container .works-item-one-half-spaced,
+	.works-masonry-container .works-item-two-third-spaced,
+	.works-masonry-container .works-item-one-fourth-spaced{
+	  margin: 0% !important;
+	  padding: 0 !important;
+	  width: 100% !important;
+	}
+	.works-item-inner {
+	    padding: 0 40px;
+	    text-align: left;
+	}
+    .menu-trigger p{
+    	display: none;
+    }
+    .intro-03 h1, .about-03 h2, .about-01 h2, .about-04 h2, .promo-text, .about-02 h3, .news-post-head h2, .contact-tile h6 {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 8px;
+    }
+    .service-block{
+        margin-bottom: 40px;
+    }
+    .team-01-info{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .call-to-action h1, .about-03 h1{
+        font-size: 20px;
+        line-height: 27px;
+    } 
+    .news-post-head h4, .news-post-head h4 span{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .news-post-content, .contact-tile {
+        padding: 80px 40px;
+    }
+    .featured-work-caption{
+        left: 30px !important;
+        font-size: 24px !important;
+        line-height: 31px !important;
+    }
+    .featured-work-caption > span{
+        font-size: 32px !important;
+        line-height: 39px !important;
+    }
+    header.masthead{
+        padding: 0 20px;
+    }
+    .header-highlighted{
+        padding: 0px 20px !important;
+    }
+}
+
+/*iPhone 6Plus Portrait Mode*/
+@media screen and (max-width: 414px) {
+    .container {
+        width: 374px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    section.mastwrap{
+      border: 20px solid;
+      border-top: 80px solid;
+      border-bottom: 0;
+    }
+}
+
+/*iPhone 6 Portrait Mode*/
+@media screen and (max-width: 375px) {
+    .container {
+        width: 335px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/*iPhone 5S, 5, 4S & 4 Portrait Mode and Very Small Mobile Phones*/
+@media screen and (max-width: 320px) {
+    .container {
+        width: 280px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
