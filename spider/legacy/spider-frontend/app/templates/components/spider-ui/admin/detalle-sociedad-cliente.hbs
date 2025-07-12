@@ -1,0 +1,95 @@
+{{#if perfilId}}
+  <div class="pa3 f4 blue bg-light-blue-alt">
+    {{#link-to "admin.clientes" class="underline"}}Clients{{/link-to}}
+    / {{#link-to "admin.clientes.detalle" perfil.id class="underline"}}{{ perfil.nombreCompleto }}{{/link-to}}
+    / Companies
+  </div>
+  <div class="flex ph3 bg-white">
+    <div class="dt">
+        <div class="dtc v-mid h3">
+          {{#if perfil.avatar }}
+            <img src="avatares/{{perfil.avatar}}" class="mw5 sm-avatar-2 v-mid ba bw1 b--light-gray bg-white circle" alt="">
+          {{else}}
+            <img src="avatares/avatar_boy_03.svg" class="mw5 sm-avatar-2 v-mid ba bw1 b--light-gray bg-white circle" alt="">
+          {{/if}}
+        </div>
+    </div>
+    <div class="blue dt flex1">
+      <div class="dtc v-mid h3">
+        <div class="dib pl3">
+          {{fa-icon "envelope"}}
+          {{if perfil.email perfil.email perfil.user.username }}
+        </div>
+
+        <div class="dib pl3">
+          {{fa-icon "whatsapp" prefix="fab" size="lg"}}
+          {{fa-icon "phone"}}
+          {{ perfil.telefono }}
+        </div>
+      </div>
+    </div>
+    <div class="dt">
+      {{#unless traerSociedades.isRunning}}
+        <div class="dtc v-mid h3 pointer" {{action "toggleDropdown"}}>
+          <div class="pv2 pl3 bg-light-blue-alt w5 flex">
+            <div class="tl flex1">
+              {{sociedad.razonSocial}}
+            </div>
+            <div class="tr ph3 black-50">
+              {{#if dropdown}}
+                {{fa-icon "caret-up"}}
+              {{else}}
+                {{fa-icon "caret-down"}}
+              {{/if}}
+
+            </div>
+          </div>
+
+          <div class="absolute bg-white bl bw1px b--light-gray {{ if dropdown 'db' 'dn' }} ">
+            {{#each traerSociedades.lastSuccessful.value as |sociedad_|}}
+            <div class="pa2 tl w5 bb bw1px b--light-gray pointer blue-hover" {{action "toggleDropdown"}}>
+              {{#link-to "admin.clientes.detalle-sociedad" perfil.id sociedad_.id }}
+                {{sociedad_.razonSocial}}
+              {{/link-to}}
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      {{else}}
+        <div class="dtc v-mid h3 tc w5">
+          <img src="oval-black.svg" alt="" class="h2">
+        </div>
+      {{/unless}}
+    </div>
+  </div>
+{{else}}
+  <div class="pa3 f4 blue bg-light-blue-alt">
+    {{#link-to "admin.clientes" class="underline"}}Clients{{/link-to}}
+    / Companies
+    / {{ sociedad.razonSocial }}
+  </div>
+{{/if}}
+
+<div class="pa3">
+  <div class="pa3 bg-white mb3">
+    {{spider-ui/admin/detalle-sociedad-cliente/una-sociedad sociedad=sociedad}}
+  </div>
+
+  {{#if (tiene-permiso perfil_ "admin.property.show_investor") }}
+    <div class="pa3  bg-white mb3">
+      {{spider-ui/admin/detalle-sociedad-cliente/listado-participaciones tarea=traerParticipaciones}}
+    </div>
+  {{/if}}
+
+  <div class="pa3  bg-white mb3">
+    {{spider-ui/admin/detalle-cliente/listado-propiedades tarea=traerPropiedades perfilId=perfilId}}
+  </div>
+
+  <div class="pa3 bg-white mb3">
+    {{spider-ui/admin/detalle-cliente/listado-proyectos tarea=traerProyectos}}
+  </div>
+
+  <div class="pa3 bg-white mb3">
+    {{spider-ui/admin/detalle-sociedad-cliente/documentos sociedad=sociedad}}
+  </div>
+</div>
